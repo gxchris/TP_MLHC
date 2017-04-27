@@ -9,7 +9,7 @@ import matplotlib.pyplot as plt
 import math
 
 # read and input data
-# generate lists for images and labels (train, test)
+# generate lists for images and labels (train, val)
 path = "C:/Users/Xin/Desktop/S17/94867/Dataset/entire"
 
 def import_files(path,ratio):
