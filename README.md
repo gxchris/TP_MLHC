@@ -8,11 +8,12 @@ Prerequisites
 
 Install python (including numpy and pandas) and tensorflow:
 
-Python with related packages: Download python3.5 and use Command Prompt to install required packages.
-The most effective way to install ml packages is to download anaconda which includes more than 620 analytic packages
+Python with related packages: Download python3.5 (only this version is compatible with latest version of tensorflow) and 
+use Command Prompt to install required packages. The most effective way to install ml packages is to 
+download anaconda which includes more than 620 analytic packages
 
 Tensorflow: refer to https://www.tensorflow.org/install/ for detailed instructions. 
-If you have anaconda isstalled, you could refer to https://anaconda.org/jjhelmus/tensorflow to pip install this package
+If you have anaconda installed, you could refer to https://anaconda.org/jjhelmus/tensorflow to pip install this package
 
 Enter the following codes in your python interactive shell
 
