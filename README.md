@@ -3,7 +3,7 @@ Image Classification for Colorectal Cancer Diagnosis
 This project aims to use CNN to do image classification and enable users to predict a label (benign or malignant) for a given
 HE-colored colon image
 
-Getting Started
+Getting Started - 
 Prerequisites
 
 Install python (including numpy and pandas) and tensorflow:
