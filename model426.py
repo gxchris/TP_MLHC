@@ -6,9 +6,8 @@ import input426
     
 def variable_on_cpu(name,shape,initilizer):
     with tf.device('/cpu:0'):
-        dtype = tf.float32
-        # get an existing variable or create a new one
-        var = tf.get_variable(name,shape, initializer = None,dtype = dtype)
+        dtype = tf.float32        
+        var = tf.get_variable(name,shape, initializer = None,dtype = dtype) # get an existing variable or create a new one
     return var
     
 def variable_of_weight(name,shape,stddev):
@@ -83,7 +82,6 @@ def loss(logits, labels):
 #  Create an optimizer and apply to training dataset
 def train(loss,learning_rate):
     optimizer = tf.train.AdadeltaOptimizer(learning_rate = learning_rate)
-    # create a variable named "global step"
     global_step = tf.Variable(0,name = 'global_step',trainable = False)
     train_op = optimizer.minimize(loss, global_step = global_step)
     return train_op
@@ -91,7 +89,7 @@ def train(loss,learning_rate):
 # Evaluate
 def evaluate(logits, labels):
     with tf.variable_scope('accuracy') as scope:
-        # check whether images are in the top 1 prediction
+        # check whether images are in the top one prediction
         correct = tf.nn.in_top_k(logits,labels,1) 
         correct = tf.cast(correct,tf.float16)
         accuracy = tf.reduce_mean(correct)
