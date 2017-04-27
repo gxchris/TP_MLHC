@@ -17,7 +17,8 @@ learning_rate = 0.0001
 
 def run_training():
     # read image data
-    path = "C:/Users/Xin/Desktop/S17/94867/Dataset/train"
+    # another option: path = "C:/Users/Xin/Desktop/S17/94867/Dataset/entire". It depends on your CPU capability
+    path = "C:/Users/Xin/Desktop/S17/94867/Dataset/train" 
     logs_train_dir = "C:/Users/Xin/Desktop/S17/94867/Dataset/log/train"
     logs_val_dir = "C:/Users/Xin/Desktop/S17/94867/Dataset/log/val"
     train_img,train_label,val_img,val_label = input426.import_files(path,RATIO)
