@@ -36,14 +36,13 @@ def run_training():
     y = tf.placeholder(tf.int16, shape = [BATCH_SIZE])
     
     with tf.Session() as sess:
-        saver = tf.train.Saver() # create a saver
-        # return an ops that initialize global variables
-        sess.run(tf.global_variables_initializer()) 
+        saver = tf.train.Saver() # create a saver   
+        sess.run(tf.global_variables_initializer()) # return an ops that initialize global variables
         coord = tf.train.Coordinator() # create a coordinator
         # start all queue runner
         threads = tf.train.start_queue_runners(sess=sess, coord=coord)
         
-        # summary
+        # summary for tensorboard visualization
         summary_op = tf.summary.merge_all()
         train_writer = tf.summary.FileWriter(logs_train_dir,sess.graph)
         val_writer = tf.summary.FileWriter (logs_val_dir,sess.graph)
