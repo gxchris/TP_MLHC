@@ -41,6 +41,7 @@ def import_files(path,ratio):
     temp = np.array([image_list,label_list]).transpose()
     np.random.shuffle(temp)     
     
+    # split the images into subsets - one for training, the other for validation
     image_list = list(temp[:,0])
     label_list = list(temp[:,1])
     n_sample = len(label_list) # 85+80
