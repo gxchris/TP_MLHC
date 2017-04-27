@@ -24,7 +24,6 @@ def import_files(path,ratio):
         # if not filename.startswith('tr'):
         #     continue
         filename = filename.split(".")[0]
-        # print("filename",filename)
         if filename in d:
             if d[filename]==' benign':
                 benign.append(path+'/'+filename)
