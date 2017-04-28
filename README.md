@@ -1,4 +1,4 @@
-Image Classification for Colorectal Cancer Diagnosis 
+Image Classification for Colorectal Cancer Diagnosis with CNN Model
  
 This project aims to use CNN to do image classification and enable users to predict a label (benign or malignant) for a given
 HE-colored colon image
