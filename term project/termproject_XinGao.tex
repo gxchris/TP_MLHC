@@ -208,6 +208,7 @@ Loss Reduction: orange line represents the training set and green line represent
 \label{figure1}
 \end{figure}
 
+
 \newpage
 \section{Results} \label{results}
 We predicted the accuracy on test samples and the table below shows the accuracy for test subset A and B. The average accuracy for test set A is 0.8179 and for test B is 0.8406.
@@ -228,21 +229,27 @@ We predicted the accuracy on test samples and the table below shows the accuracy
     \caption{Evaluation on Accuracy on Test Samples} 
 \end{table}
 
-% insert a figure 5
-\begin{figure}[htbp]
-\centering
-\includegraphics[width=.8\textwidth]{figure9.JPG}
-\caption{Evaluation on Accuracy on Test Samples}
-\label{figure1}
-\end{figure}
+\begin{table}[htbp]
+  \centering 
+  \begin{tabular}{lclc} 
+    Dataset & Precision & Recall & F1 Score\\ 
+    \hline \\[-11pt]
+    Training & 0.60 & 0.83 &0.69 \\ 
+    Test A    & 0.53 & 0.88 & 0.66\\
+    Test B    & 0.80 & 0.75 & 0.77 \\ \hline
+  \end{tabular}
+  \label{tab:example} 
+    \caption{Performance Metrics of Our Model} 
+\end{table}
+
 
 \newpage
 \section{Discussion and Related Work} 
 In this project, we implemented a typical ConvNet model to classify the images of H&E-stained adenocarcinoma and achieved an accuracy over 80\%. However, there are many areas to be improved. 
 
 Firstly, I may explore more advanced or novel CNN model. In H Chen, XJ Qi, et al \citep{9} (who is the winner of the competition)'s model, they used fully convolutional networks to conduct the image segmentation which achieved an F1 score of 0.9116 on test set A and 0.7158 on test set B. Their model contains two modules - down-sampling path and up-sampling path. The former includes convolutional layer and pooling layers and the latter includes convolutional layers and deconvolutional layers. 
-Secondly, in terms of data pre-processing, I should do more testing to select the best target width and height. Some studies applied an equal target width and height at 480,480. 
-Thirdly, due to the limitation of my computer's computational and storage capability, I could not add more layers to build a more complicated structure. Fourthly, the ultimate goal of this project is to use advanced machine learning algorithms to perform gland segmentation and depict gland contours. Tensorflow has released a new package TF-slim which is specialized in conducting image segmentation. Other computer vision packages like openCV could also be used to match the representative gland structure on the image and do the segmentation. Lastly, I need to use more metrics to evaluate the performance of the model like precision, recall, etc.
+Secondly, in terms of data pre-processing, I should do more testing to select the best target width and height. Some studies applied an equal target width and height at 480,480. Moreover, the size of training dataset is too small and current precision and recall values revealed that the model was over-fitting, indicating that we may need to improve the data augmentation algorithm. 
+Thirdly, due to the limitation of my computer's computational and storage capability, I could not add more layers to build a more complicated structure. Fourthly, the ultimate goal of this project is to use advanced machine learning algorithms to perform gland segmentation and depict gland contours. Tensorflow has released a new package TF-slim which is specialized in conducting image segmentation. Other computer vision packages like openCV could also be used to match the representative gland structure on the image and do the segmentation.  
 
 This project enables the automatic detection of a malignant colorectal tumor with a relatively good accuracy. This would help reduce the workload of clinical pathologists and serve as an auxiliary tool to improve diagnosis accuracy. 
 
@@ -279,5 +286,15 @@ This project implemented a classic CNN model to distinguish benign colorectal ad
 \caption{Comparison of Different Optimizer in Reducing Training Costs}
 \label{figure1}
 \end{figure}
+
+
+% insert a figure 9
+\begin{figure}[htbp]
+\centering
+\includegraphics[width=.8\textwidth]{figure9.JPG}
+\caption{Evaluation on Accuracy on Test Samples}
+\label{figure1}
+\end{figure}
+
 
 \end{document}
