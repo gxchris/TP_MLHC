@@ -78,7 +78,7 @@ def run_training():
                     
         except tf.errors.OutOfRangeError:
             
-            print('Training is done')
+            print('Training Finished')
             
         finally:
             coord.request_stop()
