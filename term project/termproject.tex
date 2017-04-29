@@ -227,7 +227,7 @@ We employed confusion matrix to measure the performance of current model on test
 \end{table}
 
 \section{Discussion and Related Work} 
-In this project, we implemented a typical ConvNet model to classify the images of H&E-stained adenocarcinoma and achieved an accuracy over 80\%. However, there are many areas to be improved. 
+In this project, we implemented a typical ConvNet model to classify the images of H&E-stained adenocarcinoma and achieved an accuracy nearly 70\% and there are many areas to be improved. 
 
 Firstly, I may explore more advanced or novel CNN model. In H Chen, XJ Qi, et al \citep{9} (who is the winner of the competition)'s model, they used fully convolutional networks to conduct the image segmentation which achieved an F1 score of 0.9116 on test set A and 0.7158 on test set B. Their model contains two modules - down-sampling path and up-sampling path. The former includes convolutional layer and pooling layers and the latter includes convolutional layers and deconvolutional layers. 
 Secondly, in terms of data pre-processing, I should do more testing to select the best target width and height. Some studies applied an equal target width and height at 480,480. Moreover, the size of training dataset is too small and current precision and recall values revealed that the model was over-fitting, indicating that we may need to improve the data augmentation algorithm. 
@@ -269,14 +269,6 @@ This project implemented a classic CNN model to distinguish benign colorectal ad
 \label{figure1}
 \end{figure}
 
-
-% insert a figure 9
-\begin{figure}[htbp]
-\centering
-\includegraphics[width=.8\textwidth]{figure9.JPG}
-\caption{Evaluation on Accuracy on Test Samples}
-\label{figure1}
-\end{figure}
 
 
 \end{document}
