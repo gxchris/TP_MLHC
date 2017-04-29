@@ -27,7 +27,7 @@
 
 \begin{abstract}
 
-The aim of this project is to implement a Convolutional Neural Network (CNN) to extract distinctive features from the images of H&E stained colon tissue and predict the benign or malignant status for the sample. In this article, We will elaborate the ConvNet architecture which enabled an efficient training with an average accuracy over 80\% on test samples. In our model, we also chose a very popular optimizer Adam algorithm to better control the learning rate and minimize memory usage. 
+The aim of this project is to implement a Convolutional Neural Network (CNN) to extract distinctive features from the images of H&E stained colon tissue and predict the benign or malignant status for the sample. In this article, We will elaborate the ConvNet architecture which enabled an efficient training with an average accuracy nearly 70\% on test samples. In our model, we also chose a very popular optimizer Adam algorithm to better control the learning rate and minimize memory usage. 
  
 \end{abstract}
 
@@ -211,23 +211,7 @@ Loss Reduction: orange line represents the training set and green line represent
 
 \newpage
 \section{Results} \label{results}
-We predicted the accuracy on test samples and the table below shows the accuracy for test subset A and B. The average accuracy for test set A is 0.8179 and for test B is 0.8406.
-
-\begin{table}[htbp]
-  \centering 
-  \begin{tabular}{lclc} 
-    Test Subset & A& B \\ 
-    \hline \\[-11pt]
-    Mean & 0.8179&0.8406\\
-    SE Mean & 0.0209 &0.8406\\
-    StDev & 0.1436 & 0.1354\\
-    Min & 0.5122 & 0.5619\\
-    Median & 0.8930 &0.9078\\
-    Max & 0.8930 &0.9078\\\hline
-  \end{tabular}
-  \label{tab:example} 
-    \caption{Evaluation on Accuracy on Test Samples} 
-\end{table}
+We employed confusion matrix to measure the performance of current model on test samples.
 
 \begin{table}[htbp]
   \centering 
@@ -242,8 +226,6 @@ We predicted the accuracy on test samples and the table below shows the accuracy
     \caption{Performance Metrics of Our Model} 
 \end{table}
 
-
-\newpage
 \section{Discussion and Related Work} 
 In this project, we implemented a typical ConvNet model to classify the images of H&E-stained adenocarcinoma and achieved an accuracy over 80\%. However, there are many areas to be improved. 
 
