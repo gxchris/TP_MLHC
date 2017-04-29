@@ -44,7 +44,7 @@ def import_files(path,ratio):
     
     labList = list(temp[:,1])
     nTotal = len(labList) # = 85
-    nVal = math.ceil(nTotal*ratio)# num of validation samples
+    nVal = math.floor(nTotal*ratio)# num of validation samples
     nTrain = nTotal-nVal # num of training samples
     
     traIMG = imgList[0:nTrain]
