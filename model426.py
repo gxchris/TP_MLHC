@@ -29,7 +29,7 @@ def inference(images,batch_size,num_classes):
         
     #pool1 and norm1   
     # perform the max pooling on the conv1
-    pool1 = tf.nn.max_pool(conv1,ksize=[1,3,4,1],strides=[1,2,2,1],
+    pool1 = tf.nn.max_pool(conv1,ksize=[1,3,3,1],strides=[1,2,2,1],
                             padding ='SAME',name = 'pool1')
     # local response normalization
     norm1 = tf.nn.lrn(pool1,4, bias=1.0, alpha =0.001/9.0,
