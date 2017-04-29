@@ -11,7 +11,7 @@ def run_testing():
     with tf.Graph().as_default(): # define operations and tensors
         BATCH_SIZE = 1
         N_CLASSES = 2
-        RATIO = 0.2
+        RATIO = 0
         path = "C:/Users/Xin/Desktop/S17/94867/Dataset/test"
         testImage,testLabel,valImage,valLabel = input426.import_files(path,RATIO)
         #oneImage = testImage[1]
