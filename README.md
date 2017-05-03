@@ -29,7 +29,7 @@ If your system has successfully installed tensorflow, it will display "Hello, Te
 
 Dataset:
 
-Two datasets have been uploaded: the training image dataset and the entire image dataset (including both the training and test images).
+Two datasets have been uploaded: the training image dataset and the test image dataset.
 You need to download those datasets in your local computer and when you run the programs, remember to change the path to your local 
 directory.
 
